@@ -15,14 +15,12 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [7.2, 7.3, 7.4]
-        laravel: [^6.0, ^7.0]
+        php: [7.3, 7.4]
+        laravel: [^8.0]
         dbal: [^2.10]
         include:
-          - laravel: ^7.0
-            testbench: ^5.0
-          - laravel: ^6.0
-            testbench: ^4.0
+          - laravel: ^8.0
+            testbench: ^6.0
 
     name: Laravel ${{ matrix.laravel }} on PHP ${{ matrix.php }}
 
